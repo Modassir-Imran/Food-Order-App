@@ -4,8 +4,8 @@ import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 
 export default function MyOrder () {
-  const [orderData, setOrderData] = useState("")
-//console.log( "order data afdsfdskf ",orderData)
+  const [orderData, setOrderData] = useState('')
+  //console.log( "order data afdsfdskf ",orderData)
   const fetchMyOrder = async () => {
     await fetch('http://localhost:3003/api/auth/myOrderData', {
       method: 'POST',
@@ -14,7 +14,6 @@ export default function MyOrder () {
       },
       body: JSON.stringify({
         email: localStorage.getItem('userEmail')
-
       })
     })
       .then(async res => {
@@ -29,14 +28,14 @@ export default function MyOrder () {
   useEffect(() => {
     fetchMyOrder()
   }, [])
-//console.log("order data aarha hai  ",orderData)
+  //console.log("order data aarha hai  ",orderData)
   return (
-    <div className=''>
+    <div className='min-vh-100'>
       <div>
         <Navbar />
       </div>
       <div className='container mb-5'>
-        <div className='row mb-5'>
+        <div className=' '>
           {orderData && orderData.length > 0 ? (
             orderData.map((order, index) => {
               return (
@@ -48,7 +47,8 @@ export default function MyOrder () {
                         <hr />
                       </div>
                     ) : (
-                      <div key={idx} className='col-12 col-md-6 col-lg-3'>
+                     <div className=''>
+                       <div key={idx} className=' d-flex '>
                         <div
                           className='card mt-3'
                           style={{
@@ -77,6 +77,7 @@ export default function MyOrder () {
                           </div>
                         </div>
                       </div>
+                     </div>
                     )
                   })}
                 </div>
@@ -85,14 +86,16 @@ export default function MyOrder () {
           ) : (
             <div className=' d-flex justify-content-center mt-5 container '>
               <Link
-               className='btn bg-success roundedrem navbar-brand fs-3 ' to='/'>
-            Go Order
-          </Link>
+                className='btn bg-success roundedrem navbar-brand fs-3 '
+                to='/'
+              >
+                Go Order
+              </Link>
             </div>
           )}
         </div>
       </div>
-      <div className='fixed-bottom'> 
+      <div className=''>
         <Footer />
       </div>
     </div>
