@@ -21,7 +21,7 @@ export default function Cart () {
     try {
       let userEmail = localStorage.getItem('userEmail')
 
-      let response = await fetch('http://localhost:3003/api/auth/orderData', {
+      let response = await fetch('https://food-order-backend-0x58.onrender.com/api/auth/orderData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

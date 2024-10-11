@@ -13,7 +13,7 @@ function Signup () {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const response = await fetch('http://localhost:3003/api/auth/createuser', {
+    const response = await fetch('https://food-order-backend-0x58.onrender.com/api/auth/createuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

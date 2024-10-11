@@ -7,7 +7,7 @@ export default function MyOrder () {
   const [orderData, setOrderData] = useState('')
   //console.log( "order data afdsfdskf ",orderData)
   const fetchMyOrder = async () => {
-    await fetch('http://localhost:3003/api/auth/myOrderData', {
+    await fetch('https://food-order-backend-0x58.onrender.com/api/auth/myOrderData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default function MyOrder () {
   return (
     <div className='min-vh-100'>
       <div>
-        <Navbar />
+        <Navbar />  
       </div>
       <div className='container mb-5'>
         <div className=' '>
