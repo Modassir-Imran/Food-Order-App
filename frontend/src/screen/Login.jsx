@@ -21,7 +21,7 @@ const Login = () => {
         password: credentials.password
       })
     })
-    console.log("this is loing page ")
+    console.log('this is loing page ')
     const json = await response.json()
     console.log(json)
 

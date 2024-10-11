@@ -26,18 +26,6 @@ const Navbar = () => {
           </Link>
 
           {/* ---------------------navbar toggler icon ------------------- */}
-
-          {/* <button
-            className='navbar-toggler'
-            type='button'
-            data-bs-toggle='collapse'
-            data-bs-target='#NavToggle'
-            aria-controls='NavToggle'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          >
-            <span className='navbar-toggler-icon'></span>
-          </button> */}
           <NavToggle />
 
           <div className='collapse navbar-collapse' id='navbarNav'>

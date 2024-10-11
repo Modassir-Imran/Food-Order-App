@@ -1,13 +1,13 @@
 import React from 'react'
 import { useCart, useDispatchCart } from '../components/ContextReducer'
-  import deleteIcon from '../assets/Images/delete.png'
+import deleteIcon from '../assets/Images/delete.png'
 
 export default function Cart () {
   let data = useCart()
 
- // console.log("cart data is ",  data)
-  
-  let dispatch = useDispatchCart()  
+  // console.log("cart data is ",  data)
+
+  let dispatch = useDispatchCart()
 
   if (data.length === 0) {
     return (
@@ -31,13 +31,12 @@ export default function Cart () {
           email: userEmail,
           order_date: new Date().toDateString()
         })
-      })  
+      })
 
       if (response.status === 200) {
         dispatch({ type: 'DROP' })
         alert('Order placed successfully!')
-      } 
-      
+      }
     } catch (error) {
       console.error('Error during checkout:', error)
     }
@@ -88,7 +87,10 @@ export default function Cart () {
         </table>
         <div className='fs-2'>Total Price: {totalPrice}/-</div>
         <div>
-          <button className='btn bg-success mt-5 px-4 ' onClick={handleCheckout}>
+          <button
+            className='btn bg-success mt-5 px-4 '
+            onClick={handleCheckout}
+          >
             Check Out
           </button>
         </div>
