@@ -10,7 +10,7 @@ const Home = () => {
   const [foodItems, setFoodItems] = useState([])
 
   const loadData = async () => {
-    let response = await fetch('https://food-order-backend-0x58.onrender.com/api/auth/foodData', {
+    let response = await fetch('https://food-order-app-backend-5v3t.onrender.com/api/auth/foodData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

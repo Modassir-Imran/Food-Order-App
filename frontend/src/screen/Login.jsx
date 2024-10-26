@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const response = await fetch('https://food-order-backend-0x58.onrender.com/api/auth/loginuser', {
+    const response = await fetch('https://food-order-app-backend-5v3t.onrender.com/api/auth/loginuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
