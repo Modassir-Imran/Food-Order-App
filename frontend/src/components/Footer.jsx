@@ -15,11 +15,12 @@ const Footer = () => {
       <div className="d-flex justify-content-evenly px-4">
         <p>&copy; 2024 GoFood All rights reserved</p>
         <div className="w-max flex items-center gap-2 mx-auto">
-          <span>gofoodorder123@gmail.com</span>
+          <span>modassirimran904@gmail.com</span>
+          
         </div>
         <tr className="d-flex flex-row gap-4 type-none">
           <th>
-            <Link to="">
+            <Link to="https://www.facebook.com/food/">
               <img
                 src={facebook}
                 width={"20px"}
@@ -29,7 +30,7 @@ const Footer = () => {
             </Link>
           </th>
           <th>
-            <Link to="">
+            <Link to="https://www.instagram.com/instafood_lover/?hl=en">
               <img
                 src={instagram}
                 width={"20px"}
@@ -39,7 +40,7 @@ const Footer = () => {
             </Link>
           </th>
           <th>
-            <Link to="">
+            <Link to="https://x.com/fastfoodpost?lang=en">
               <img
                 src={twitter}
                 width={"20px"}
